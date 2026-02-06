@@ -10,3 +10,9 @@
   z-index: 9999;
   transform: translate(-50%, -50%);
 }
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}

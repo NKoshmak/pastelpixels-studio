@@ -1,0 +1,98 @@
+.imageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10; /* або твій */
+  border-radius:8px;
+  overflow: hidden;     /* 🔴 ОБОВʼЯЗКОВО */
+}
+
+.imageWrap :global(img) {
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+.imageWrap img {
+  object-fit: cover;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover .frame {
+  background: #ededeb;
+}
+
+.card:hover .imageWrap :global(img) {
+  transform: scale(1.04);
+}
+
+
+.frame {
+  background: #E5E5E5;          /* світло-сірий як у рефі */
+  border-radius: 8px;
+  padding: 3rem;               /* ⬅️ БІЛЬШЕ ПОВІТРЯ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease;
+}
+
+.frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.browserBar {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  display: flex;
+  gap: 6px;
+}
+
+.browserBar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+/* META */
+
+.meta {
+  margin-top: 1.2rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+.price {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .frame {
+    padding: 1.25rem; /* або 1.5rem */
+    border-radius:8px;
+  }
+
+  .imageWrap {
+    border-radius:8px;
+  }
+}
+
+@media (hover: hover) {
+  .card:hover .imageWrap :global(img) {
+    transform: scale(1.04);
+  }
+}

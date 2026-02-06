@@ -1,0 +1,110 @@
+.block {
+  margin-top: 10rem;
+  padding-block: clamp(6rem, 12vw, 10rem);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  max-width: 640px;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.sub {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+/* CARD */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 3rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.5;
+  margin-bottom: 0.8rem;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.75;
+  margin-bottom: 2rem;
+}
+
+.list {
+  padding-left: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.list li {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 0.6rem;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note {
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+.cta {
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: inherit;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .text {
+     font-size: 0.85rem;
+  }
+
+  .cta {
+    font-size: 0.85rem;
+  }
+
+  .block {
+    padding-top: 0;
+  }
+}

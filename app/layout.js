@@ -7,7 +7,7 @@ import CustomCursor from "@/components/CustomCursor";
 
 export const metadata = {
   title: "Pastel Pixels Studio",
-  description: "Premium templates and custom development",
+  description: "Premium templates and custom HTML and Framer web development",
   icons: {
     icon: "/favicon.ico", // або .ico
     shortcut: "/favicon-32x32.png",

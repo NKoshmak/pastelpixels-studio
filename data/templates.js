@@ -2,7 +2,7 @@
 
 export const templates = [
   {
-    slug: "makeup",
+    slug: "makeupartist",
     title: "MakeUp Artist — Website Template",
     price: "$39",
     platform: "HTML/CSS",
@@ -19,7 +19,7 @@ export const templates = [
     previewUrl: "",
   },
   {
-    slug: "salon",
+    slug: "beautysalon",
     title: "Beauty Salon — Website Template",
     price: "$89",
     platform: "HTML/CSS",

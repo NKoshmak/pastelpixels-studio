@@ -87,7 +87,11 @@ export default function TemplatePage({ params }) {
                 className={styles.previewImage}
                 ref={(el) => (imagesRef.current[i] = el)}
               >
-                <Image src={img} alt="" fill />
+                <Image
+                  src={img}
+                  alt={`${template.title} — website preview ${i + 1}`}
+                  fill
+                />
               </div>
             </div>
           ))}

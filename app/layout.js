@@ -31,7 +31,6 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-P7LH0WG3YY');
           `}
         </Script>
-        <link rel="icon" href="/images/favicon.ico" />
       </head>
       <body>
         <CustomCursor />

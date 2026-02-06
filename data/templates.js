@@ -15,8 +15,8 @@ export const templates = [
     description: [
       "Create a stunning online presence with this MakeUp Artist HTML Website Portfolio Template — a fully responsive, clean, and modern layout perfect for makeup artists, brow artists, lash techs and nail masters."
     ],
-    buyUrl: "#",
-    previewUrl: "",
+    buyUrl: "https://pastelpixels.lemonsqueezy.com/checkout/buy/021707cd-33a4-402a-91d9-e141cb23bba7",
+    previewUrl: "https://makeupartist-template.netlify.app",
   },
   {
     slug: "beautysalon",

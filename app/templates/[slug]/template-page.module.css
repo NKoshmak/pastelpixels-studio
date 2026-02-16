@@ -1,5 +1,7 @@
 .page {
   padding: 10rem 4rem 8rem;
+  margin-inline: auto;
+  max-width: 1400px;
 }
 
 /* TITLE */
@@ -20,14 +22,14 @@
 
 /* PREVIEW FRAME */
 .previewFrame {
-  display: flex;
-  justify-content: center;
+  display: block;
+
 }
 
 /* IMAGE */
 .previewImage {
   width: 100%;
-  max-width: 900px;
+  max-width: none;
   aspect-ratio: 16 / 10;
   /* background: #fff; */
   border-radius: 12px;

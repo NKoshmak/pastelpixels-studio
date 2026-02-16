@@ -85,7 +85,7 @@ export default function ServicesBlock() {
           {/* FRONT-END DEV */}
           <div className={styles.card}>
             <span className={styles.label}>Your design</span>
-            <h3 className={styles.cardTitle}>Front-End Development</h3>
+            <h3 className={styles.cardTitle}>Custom Coded Website</h3>
 
             <p className={styles.text}>
               You already have a design (Figma or similar). I’ll turn it into

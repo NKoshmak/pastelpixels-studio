@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
+import FloatingCTA from "@/components/FloatingCTA"
 
 export const metadata = {
   title: "Pastel Pixels Studio",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         <CustomCursor />
         <Navbar />
         {children}
+        <FloatingCTA />
         <Footer />
       </body>
     </html>

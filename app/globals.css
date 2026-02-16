@@ -49,7 +49,7 @@ body::before {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-inline: clamp(1.25rem, 4vw, 2rem);
 }
@@ -310,7 +310,66 @@ button:hover {
   background: #333;
 }
 
-/* ========== TABLET VIEW (768px - 1024px) ========== */
+/*FLOATING BUTTON*/
+
+.floating-cta {
+  position: fixed;
+  right: 38px;
+  bottom: 38px;
+  z-index: 1000;
+
+  font-size: 14px;
+  letter-spacing: 0.02em;
+
+  padding: 12px 15px;
+  border-radius: 8px;
+
+  background: #111;
+  color: #f2f2f2;
+  border: 1px solid rgba(0,0,0,0.08);
+
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+
+  animation: floatSoft 6s ease-in-out infinite;
+}
+
+.floating-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+  background: #333;
+}
+
+@keyframes floatSoft {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .floating-cta {
+    right: 16px;
+    bottom: 16px;
+    font-size: 13px;
+    padding: 11px 16px;
+  }
+}
+
+/*CTA*/
+.ctaInlineLink {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+/* TABLET VIEW (768px - 1024px) */
 @media (max-width: 1024px) {
   .footer-columns {
     flex-direction: column;

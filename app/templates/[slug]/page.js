@@ -3,6 +3,7 @@
 import { templates } from "@/data/templates";
 import Image from "next/image";
 import styles from "./template-page.module.css";
+import ServicesCTA from "@/components/ServicesCTA";
 
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
@@ -14,6 +15,7 @@ export default function TemplatePage({ params }) {
   const template = templates.find((t) => t.slug === params.slug);
   const framesRef = useRef([]);
   const imagesRef = useRef([]);
+  const titleRef = useRef(null);
 
   useLayoutEffect(() => {
     if (window.innerWidth < 768) {
@@ -66,13 +68,40 @@ export default function TemplatePage({ params }) {
     return () => ctx.revert();
   }, []);
 
+  useLayoutEffect(() => {
+    const spans = titleRef.current.querySelectorAll("span");
+
+    gsap.fromTo(
+      spans,
+      { y: 60, opacity: 0 },
+      {
+        y: -40,
+        opacity: 1,
+        duration: 1.3,
+        ease: "power3.out",
+        stagger: 0.2,
+      },
+    );
+  }, []);
+
   if (!template) {
     return <p>Template not found</p>;
   }
 
   return (
     <main className={styles.page}>
-      <h1 className={styles.title}>{template.title}</h1>
+      <h1
+        ref={titleRef}
+        style={{
+          fontSize: "clamp(2.4rem, 5vw, 3.4rem)",
+          fontWeight: 400,
+          maxWidth: "900px",
+        }}
+      >
+        <span style={{ display: "block", overflow: "hidden" }}>
+          {template.title}
+        </span>
+      </h1>
 
       <section className={styles.layout}>
         {/* LEFT */}
@@ -122,6 +151,10 @@ export default function TemplatePage({ params }) {
             </p>
           ))}
         </aside>
+      </section>
+
+      <section style={{ paddingTop: "6rem" }}>
+        <ServicesCTA />
       </section>
     </main>
   );

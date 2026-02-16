@@ -312,6 +312,10 @@ textarea {
   outline: none;
 }
 
+textarea {
+  resize: none;
+}
+
 button {
   padding: 0.8rem;
   background: #181818;
